@@ -205,9 +205,8 @@ export default function Layout({ title, description, children }) {
         </Typography>
       </Link>
     </NextLink>
-         
-        </div>
-      </Toolbar>
+    </div>
+    </Toolbar>
     </AppBar>
     <Container className={classes.main}>{children}</Container>
     <footer className={classes.footer}>

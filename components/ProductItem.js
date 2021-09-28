@@ -21,34 +21,34 @@ export default function ProductItem({ product, addToCartHandler }) {
       variant="raised"
       style={{ backgroundColor: 'transparent' }}
       >
+      <NextLink href={`/product/${product.slug}`} passHref>
+      <Link>
       <CardMedia className={classes.cardMedia}
             component="img"
             image={product.image}
             title={product.name}
-          >
-          </CardMedia>
+            >
+            </CardMedia>
+            </Link>
+            </NextLink>
           <CardContent className={classes.cardContent}>
-          <NextLink href={`/product/${product.slug}`} passHref>
-          <Link>
           <Typography>{product.name}</Typography>
-          </Link>
-          </NextLink>
           <Typography>${product.price}</Typography>
           </CardContent>
         </CardActionArea>
       <CardActions>
-      </CardActions>
       <div className={classes.addTocart}>
       <Button
-      className={classes.addToCartButton}
-      fullWidth
-      size="large"
-      variant="contained"
-      color="primary"
-      onClick={() => addToCartHandler(product)}>
+        className={classes.addToCartButton}
+        fullWidth
+        size="small"
+        variant="contained"
+        color="primary"
+        onClick={() => addToCartHandler(product)}>
       Add to cart
     </Button>
       </div>
+      </CardActions>
     </Card>
   );
 }

@@ -52,7 +52,13 @@ import { ArrowBack } from '@material-ui/icons';
     <Layout title="Shopping Cart">
       <Typography component="h1" variant="h1">
        {cartItems.length > 0 ? (
-         <ArrowBack title="Shop More"></ArrowBack> 
+        <NextLink href="/" passHref>
+        <Link>
+          <Typography component="h1" variant="h1">
+          <ArrowBack title="shop more">Shop more</ArrowBack>
+          </Typography>
+        </Link>
+      </NextLink> 
        ) : (
          <span>Shopping Cart</span>
        )}

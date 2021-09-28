@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
       color: '#ffffff',
       marginLeft: 10,
       textUnderline: 'none',
+      textDecoration: 'none'
     },
   },
   brand: {
@@ -33,7 +34,8 @@ const useStyles = makeStyles((theme) => ({
     height: 300
   },
   description: {
-    display: 'flex'
+    display: 'flex',
+    flexWrap: 'wrap'
   },
   form: {
     maxWidth: 800,
@@ -47,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100vw'
   },
   layout: {
-    width: '75%'
+    width: '100%'
   },
   toolbar: {
     justifyContent: 'space-between',
@@ -92,25 +94,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: "space-between"
   },
-  card:{
-    position: 'relative',
-  },
-  addToCart: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    position: 'relative'
-  },
-  addToCartButton: {
-    display: 'none',
-    '&:hover':{
-      display: 'flex',
-      position: 'absolute',
-      justifyContent: "center",
-      alignItems: 'center',
-      top: 80,
-      zIndex: 1000
-  },
-},
-}));
+ }
+));
+
+
 export default useStyles;
